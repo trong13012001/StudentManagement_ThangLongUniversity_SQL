@@ -23,9 +23,12 @@ DROP TABLE IF EXISTS `class`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `class` (
-  `courseID` varchar(5) NOT NULL,
-  `studentID` varchar(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `classID` int NOT NULL AUTO_INCREMENT,
+  `courseID` int NOT NULL,
+  `studentID` varchar(6) NOT NULL,
+  `termID` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`classID`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -34,6 +37,7 @@ CREATE TABLE `class` (
 
 LOCK TABLES `class` WRITE;
 /*!40000 ALTER TABLE `class` DISABLE KEYS */;
+INSERT INTO `class` VALUES (1,1,'a36192','2223HK1N2'),(2,2,'a36192','2223HK1N2'),(3,1,'a36193','2223HK1N2'),(4,281,'a36192','2223HK1N2'),(16,50,'A36192','2223HK1N2');
 /*!40000 ALTER TABLE `class` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -46,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-09 17:03:34
+-- Dump completed on 2023-07-12 20:58:42

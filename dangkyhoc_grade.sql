@@ -23,15 +23,16 @@ DROP TABLE IF EXISTS `grade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `grade` (
+  `gradeID` int NOT NULL AUTO_INCREMENT,
   `studentID` varchar(6) NOT NULL,
-  `groupID` varchar(10) NOT NULL,
-  `courseID` varchar(5) NOT NULL,
+  `termID` varchar(10) NOT NULL,
+  `courseID` int NOT NULL,
   `progressGrade` float DEFAULT NULL,
-  `bonusGrade` float DEFAULT NULL,
-  `examlGrade1` float DEFAULT NULL,
+  `examGrade1` float DEFAULT NULL,
   `examGrade2` float DEFAULT NULL,
-  `finalGrade` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `finalGrade` float DEFAULT NULL,
+  PRIMARY KEY (`gradeID`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +41,7 @@ CREATE TABLE `grade` (
 
 LOCK TABLES `grade` WRITE;
 /*!40000 ALTER TABLE `grade` DISABLE KEYS */;
+INSERT INTO `grade` VALUES (1,'A36192','2223HK1N2',4,9,10,0,9.7),(8,'A36192','2223HK1N2',50,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `grade` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-09 17:03:34
+-- Dump completed on 2023-07-12 20:58:42

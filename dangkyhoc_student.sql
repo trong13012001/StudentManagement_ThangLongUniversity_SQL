@@ -31,13 +31,14 @@ CREATE TABLE `student` (
   `studentGender` varchar(6) DEFAULT NULL,
   `studentAddress` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
   `studentPhone` varchar(10) DEFAULT NULL,
-  `studentDatejoin` date DEFAULT NULL,
+  `studentYearJoin` int DEFAULT NULL,
   `studentParent` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
-  `majorID` varchar(6) DEFAULT NULL,
   `branchID` int DEFAULT NULL,
-  `groupID` varchar(10) DEFAULT NULL,
+  `group` int DEFAULT NULL,
+  `status` tinyint(1) NOT NULL,
   PRIMARY KEY (`studentID`),
-  UNIQUE KEY `studentEmail_UNIQUE` (`studentEmail`)
+  UNIQUE KEY `studentEmail_UNIQUE` (`studentEmail`),
+  KEY `fk_student_user1_idx` (`studentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -47,7 +48,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES ('A35380','hoangtqtq2001@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('a36192','a36192@thanglong.edu.vn','Nguyễn Văn Trọng',32,'2001-01-13','Nam','Hà Nội ','0902295556','2019-10-10','Nguyễn Văn A','TTH',7480201,NULL);
+INSERT INTO `student` VALUES ('a36192','a36192@thanglong.edu.vn','Nguyễn Văn Trọng',32,'2001-01-13','Nam','Hà Nội','0902295556',2023,'Nguyễn Văn A',7480201,2,1);
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-09 17:03:33
+-- Dump completed on 2023-07-12 20:58:43

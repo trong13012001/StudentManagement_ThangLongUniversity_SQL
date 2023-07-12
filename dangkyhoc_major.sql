@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `major`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `major` (
   `majorID` varchar(6) NOT NULL,
-  `majorName` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `majorName` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL DEFAULT 'Default Name',
   `majorELO` int DEFAULT NULL,
   PRIMARY KEY (`majorID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -36,7 +36,7 @@ CREATE TABLE `major` (
 
 LOCK TABLES `major` WRITE;
 /*!40000 ALTER TABLE `major` DISABLE KEYS */;
-INSERT INTO `major` VALUES ('ANUD','Âm nhạc ứng dụng',NULL),('CNTT','Công nghệ - Thông tin',NULL),('DL ','Du lịch',NULL),('KHSK','Khoa học sức khỏe',NULL),('KHXH','Khoa học xã hội và nhân văn',NULL),('KTQL','Kinh tế - Quản lý',NULL),('THDPT','Truyền thông đa phương tiện',NULL),('TTH','Toán - Tin học',NULL);
+INSERT INTO `major` VALUES ('ANUD','Âm nhạc ứng dụng',NULL),('CNTT','Công nghệ - Thông tin',NULL),('DL','Du lịch',NULL),('KHSK','Khoa học sức khỏe',NULL),('KHXH','Khoa học xã hội và nhân văn',NULL),('KTQL','Kinh tế - Quản lý',NULL),('NN','Ngoại ngữ',NULL),('TTDPT','Truyền thông đa phương tiện',NULL),('TTH','Toán - Tin học',NULL);
 /*!40000 ALTER TABLE `major` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-09 17:03:33
+-- Dump completed on 2023-07-12 20:58:43

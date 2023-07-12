@@ -26,6 +26,7 @@ CREATE TABLE `branch` (
   `branchID` int NOT NULL,
   `branchName` varchar(100) DEFAULT NULL,
   `majorID` varchar(6) DEFAULT NULL,
+  `groupEnd` int DEFAULT NULL,
   PRIMARY KEY (`branchID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -36,7 +37,7 @@ CREATE TABLE `branch` (
 
 LOCK TABLES `branch` WRITE;
 /*!40000 ALTER TABLE `branch` DISABLE KEYS */;
-INSERT INTO `branch` VALUES (7210205,'Thanh nhạc','ANUD'),(7220201,'Ngôn ngữ Anh','NN'),(7220204,'Ngôn ngữ Trung Quốc','NN'),(7220209,'Ngôn ngữ Nhật','NN'),(7220210,'Ngôn ngữ Hàn Quốc','NN'),(7310106,'Kinh tế quốc tế','KTQL'),(7310630,'Khoa học xã hội và nhân văn','VNH'),(7320104,'Truyền thông đa phương tiện','TTDPT'),(7340101,'Quản trị kinh doanh','KTQL'),(7340115,'Marketing','KTQL'),(7340201,'Tài chính Ngân hàng','KTQL'),(7340301,'Kế toán','KTQL'),(7480101,'Khoa học máy tính ','TTH'),(7480102,'Mạng máy tính và truyền thông dữ liệu','TTH'),(7480104,'Hệ thống thông tin','TTH'),(7480201,'Công nghệ thông tin','TTH'),(7480207,'Trí tuệ nhân tạo','TTH'),(7510605,'Logistics và Quản lí chuỗi cung ứng','KTQL'),(7720301,'Điều dưỡng','KHSK'),(7760101,'Công tác xã hội','VNH'),(7810103,'Quản trị dịch vụ du lịch - lữ hành','DL');
+INSERT INTO `branch` VALUES (7210205,'Thanh nhạc','ANUD',2),(7220201,'Ngôn ngữ Anh','NN',1),(7220204,'Ngôn ngữ Trung Quốc','NN',1),(7220209,'Ngôn ngữ Nhật','NN',1),(7220210,'Ngôn ngữ Hàn Quốc','NN',1),(7310106,'Kinh tế quốc tế','KTQL',1),(7310630,'Việt Nam học','KHXH',2),(7320104,'Truyền thông đa phương tiện','TTDPT',2),(7340101,'Quản trị kinh doanh','KTQL',1),(7340115,'Marketing','KTQL',1),(7340201,'Tài chính Ngân hàng','KTQL',2),(7340301,'Kế toán','KTQL',1),(7380107,'Luật kinh tế','KTQL',1),(7460112,'Toán ứng dụng','TTH',2),(7480101,'Khoa học máy tính ','TTH',2),(7480102,'Mạng máy tính và truyền thông dữ liệu','TTH',2),(7480104,'Hệ thống thông tin','TTH',2),(7480201,'Công nghệ thông tin','TTH',2),(7480207,'Trí tuệ nhân tạo','TTH',2),(7510605,'Logistics và Quản lí chuỗi cung ứng','KTQL',1),(7720301,'Điều dưỡng','KHSK',2),(7720401,'Dinh dưỡng','KHSK',2),(7760101,'Công tác xã hội','VNH',2),(7810103,'Quản trị dịch vụ du lịch - lữ hành','DL',2);
 /*!40000 ALTER TABLE `branch` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-09 17:03:34
+-- Dump completed on 2023-07-12 20:58:43
