@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 8.0.33, for macos13 (arm64)
+-- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: dangkyhoc
 -- ------------------------------------------------------
@@ -28,7 +28,7 @@ CREATE TABLE `exam` (
   `examShiftStart` varchar(5) NOT NULL,
   `examShiftEnd` varchar(5) NOT NULL,
   `examDate` date NOT NULL,
-  `term` varchar(10) DEFAULT NULL,
+  `termID` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`examID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1937 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-17 22:21:48
+-- Dump completed on 2023-07-20 16:33:22
